@@ -14,6 +14,13 @@ import FavouritesScreen from "../screens/FavouritesScreen";
 
 import Colors from "../constants/Colors";
 
+const defaultOptions = {
+  headerStyle: {
+    backgroundColor: Colors.primaryColor,
+  },
+  headerTintColor: "white",
+};
+
 const MealsNavigator = createStackNavigator(
   {
     Categories: CategoriesScreen,
@@ -26,12 +33,17 @@ const MealsNavigator = createStackNavigator(
   },
 
   {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: Colors.primaryColor,
-      },
-      headerTintColor: "white",
-    },
+    defaultNavigationOptions: defaultOptions,
+  }
+);
+
+const FavouriteNavigator = createStackNavigator(
+  {
+    Favorites: FavouritesScreen,
+    MealDetails: MealDetailsScreen,
+  },
+  {
+    defaultNavigationOptions: defaultOptions,
   }
 );
 
@@ -49,7 +61,7 @@ const tabScreenConfig = {
     },
   },
   Favorites: {
-    screen: FavouritesScreen,
+    screen: FavouriteNavigator,
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return (

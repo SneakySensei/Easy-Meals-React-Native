@@ -22,7 +22,7 @@ MealDetailsScreen.navigationOptions = (navigationData) => {
 
   return {
     headerTitle: chosenMeal.title,
-    headerRight: () => {
+    headerRight: () => (
       <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
         <Item
           title="Favorite"
@@ -31,8 +31,8 @@ MealDetailsScreen.navigationOptions = (navigationData) => {
             console.log("Marked as favorite!");
           }}
         />
-      </HeaderButtons>;
-    },
+      </HeaderButtons>
+    ),
   };
 };
 
