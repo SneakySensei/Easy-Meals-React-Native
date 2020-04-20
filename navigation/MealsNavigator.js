@@ -20,6 +20,12 @@ const defaultOptions = {
   headerStyle: {
     backgroundColor: Colors.primaryColor,
   },
+  headerTitleStyle: {
+    fontFamily: "open-sans-bold",
+  },
+  headerBackTitleStyle: {
+    fontFamily: "open-sans",
+  },
   headerTintColor: "white",
 };
 
@@ -83,6 +89,9 @@ const MealsFavNavigator = (Platform.OS = "android"
     })
   : createBottomTabNavigator(tabScreenConfig, {
       tabBarOptions: {
+        labelStyle: {
+          fontFamily: "open-sans",
+        },
         activeTintColor: Colors.highlightColor2,
       },
     }));

@@ -24,9 +24,9 @@ const MealCard = (props) => {
           </View>
 
           <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
-            <Text>{props.duration}m</Text>
-            <Text>{props.complexity.toUpperCase()}</Text>
-            <Text>{props.affordability.toUpperCase()}</Text>
+            <Text style={styles.text}>{props.duration}m</Text>
+            <Text style={styles.text}>{props.complexity.toUpperCase()}</Text>
+            <Text style={styles.text}>{props.affordability.toUpperCase()}</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -69,6 +69,9 @@ const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "flex-end",
     backgroundColor: "white",
+  },
+  text: {
+    fontFamily: "open-sans",
   },
 });
 
