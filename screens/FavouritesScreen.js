@@ -13,7 +13,7 @@ const FavouritesScreen = (props) => {
   if (favMeals.length == 0) {
     return (
       <View style={styles.screen}>
-        <Text>No Favorites Added Yet</Text>
+        <Text style={styles.text}>No Favorites Added Yet</Text>
       </View>
     );
   }
@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  text: {
+    fontFamily: "open-sans",
   },
 });
 
