@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Meals",
-    "slug": "Meals",
+    "name": "Easy Meals",
+    "slug": "easymeals",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "First time implementation of react navigation and redux. Critique is appreciated.",
+    "githubUrl": "https://github.com/sneakySensei/Easy-Meals-React-Native"
   }
 }
